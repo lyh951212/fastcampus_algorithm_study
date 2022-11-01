@@ -3,6 +3,10 @@ package 배열_2566;
 import java.io.*;
 import java.util.StringTokenizer;
 
+/*
+    메모리 : 16204 KB
+    시간 : 156 ms
+*/
 public class moon_2566 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
