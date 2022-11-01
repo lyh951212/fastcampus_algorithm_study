@@ -32,3 +32,5 @@ public class Main {
         bw.close();
     }
 }
+
+// 15936 KB	144 ms
