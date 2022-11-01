@@ -24,3 +24,5 @@ class Main {
         System.out.print(arr.get(0) + " " + arr.get(n-1));
     }
 }
+// 메모리 : 333524kb
+// 시간: 2380ms
