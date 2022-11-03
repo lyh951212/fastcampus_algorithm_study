@@ -1,3 +1,5 @@
+// Runtime: 2 ms Memory Usage: 47.6 MB
+
 class Solution {
     public int removeDuplicates(int[] nums) {
         int count = 1;
