@@ -36,4 +36,4 @@ class Main{
         bw.close();
     }
 }
-// 	15656kb,184ms
+// 	15604kb,	180ms
