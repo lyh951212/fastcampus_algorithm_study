@@ -21,7 +21,7 @@ public class Main {
             numList.add(i+1);
         }
 
-        // 큐가 다 없어질 때까지 while문을 돈다
+        // 컨테이너가 다 없어질 때까지 while문을 돈다
         Iterator<Integer> iter = numList.iterator();
         while(!numList.isEmpty())
         {
