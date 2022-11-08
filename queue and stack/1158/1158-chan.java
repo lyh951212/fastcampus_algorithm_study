@@ -6,12 +6,13 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -21,7 +22,8 @@ public class Main {
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
 
-        Deque<Integer> people = new ArrayDeque<>();
+        Queue<Integer> people = new ArrayDeque<>(); // 284ms
+        // Queue<Integer> people = new LinkedList<>(); // 624ms
         List<Integer> result = new ArrayList<>();
 
         for (int i = 0; i < N; i++) {
@@ -30,9 +32,9 @@ public class Main {
 
         while (people.size() != 0) {
             for (int i = 0; i < K - 1; i++) {
-                people.addLast(people.pop());
+                people.add(people.poll());
             }
-            result.add(people.pop());
+            result.add(people.poll());
         }
 
         bw.write("<");
@@ -48,5 +50,6 @@ public class Main {
         bw.flush();
         bw.close();
         br.close();
+
     }
 }
