@@ -1,7 +1,7 @@
 package stack_queue;
 
 import java.util.ArrayList;
-
+// 0ms, 42mb 
 class MyStack {
 
     ArrayList<Integer> arr;
