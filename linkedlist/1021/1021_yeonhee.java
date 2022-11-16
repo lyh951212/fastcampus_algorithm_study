@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-//14272kb,	224ms
+//14272kb,	124ms
 public class bakjoon_1021 {
 
     public static void main(String[] args) throws IOException {
@@ -18,11 +18,9 @@ public class bakjoon_1021 {
         int n =  Integer.parseInt(st.nextToken());
         int m =  Integer.parseInt(st.nextToken());
 
-        Queue<Integer> numbersQ = new ArrayDeque<>(n);
         ArrayList<Integer> numbersArr = new ArrayList<>(n);
         for(int i = 0 ; i < n; ++i )
         {
-            numbersQ.add(i+1);
             numbersArr.add(i+1);
         }
 
@@ -41,7 +39,6 @@ public class bakjoon_1021 {
             {
                 numbersArr.remove(0);
                 orderQ.poll();
-                numbersQ.poll();
                 continue;
             }
 
