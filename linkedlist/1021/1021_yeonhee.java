@@ -2,10 +2,7 @@ package linked_list;
 
 import java.io.*;
 import java.nio.Buffer;
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Queue;
-import java.util.StringTokenizer;
+import java.util.*;
 
 //14272kb,	124ms
 public class bakjoon_1021 {
@@ -35,7 +32,7 @@ public class bakjoon_1021 {
         while(false == orderQ.isEmpty())
         {
             Integer firstNum = orderQ.peek();
-            if(numbersArr.get(0) == firstNum)
+            if(Objects.equals(numbersArr.get(0), firstNum))
             {
                 numbersArr.remove(0);
                 orderQ.poll();
