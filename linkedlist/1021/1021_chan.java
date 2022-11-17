@@ -40,7 +40,7 @@ public class Main {
                     TargetList.remove(0);
                     numberQueue.pop();
                     done = false;
-                } else if (moreIntoLeft(numberQueue, target)) {
+                } else if (moreIntoLeft_2(numberQueue, target)) {
                     moveToLeft(numberQueue);
                     count++;
                 } else {
@@ -65,10 +65,29 @@ public class Main {
         deque.addFirst(deque.removeLast());
     }
 
-    public static boolean moreIntoLeft(Deque deque, int num) {
+    // 아무 생각 없는 사람
+    public static boolean moreIntoLeft_1(Deque deque, int num) {
         List<Integer> list = new ArrayList<>(deque);
 
         if (list.indexOf(num) < Math.ceil((double) list.size() / 2)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    // 생각 좀 한 사람
+    public static boolean moreIntoLeft_2(Deque deque, int num) {
+        Iterator<Integer> itr= deque.iterator();
+        int count = 0;
+        while(itr.hasNext()){
+            if (itr.next().equals(num)) {
+                break;
+            }
+            ++count;
+        }
+
+        if (count < Math.ceil((double) deque.size() / 2)) {
             return true;
         } else {
             return false;
