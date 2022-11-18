@@ -13,8 +13,8 @@ public class bakjoon_3190 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int N = Integer.parseInt(br.readLine());
-        int appleCnt = Integer.parseInt(br.readLine());
+        int N           = Integer.parseInt(br.readLine());
+        int appleCnt    = Integer.parseInt(br.readLine());
 
         //{x,y} 형태로 넣어준다.
         ArrayList<Integer[]> applePos = new ArrayList<>();
@@ -27,9 +27,9 @@ public class bakjoon_3190 {
         }
 
         int directionChangeCnt  = Integer.parseInt(br.readLine());
-        // move배열에서 인덱스 0 -> 3방향으로 갈수록 시계 방향으로 회전
+        // move배열에서 인덱스 0 -> 3방향으로 갈수록 시계 방향으로 회전(오른쪽)
         int[][] move            = {{0,1}, {1,0}, {0,-1},{-1,0}};
-        int direction           = 0;
+        int direction           = 0; // move배열의 인덱스
         int[] curDir            = {0,1}; // 현재 뱀이 가는 방향, 디폴트로 오른쪽으로(y좌표 증가) 가니까 {0,1}
         int[] curPos            = {1,1}; // 1,1 에서 뱀이 출발한다. 현재 위치
         HashMap<Integer, String> dirChangeInfo = new HashMap<>();
@@ -47,7 +47,8 @@ public class bakjoon_3190 {
         int duration = 0;
         while(true)
         {
-            if(IsWall(snakeBody, N))
+            int[] snakeHeadPos = snakeBody.get(0);
+            if(IsWall(snakeHeadPos, N))
                break;
             //---------------------------------------------
             // 현재 게임 지속하고 있는 시간이 방향이 바뀌는 타이밍이면 curDir 값을 변경해준다.
@@ -73,14 +74,13 @@ public class bakjoon_3190 {
             }
             //---------------------------------------------
 
-            int[] snakeHeadPos = snakeBody.get(0);
+            // 머리가 자신의 몸과 부딪혔는지 판별
             if(IsSnakeBody(snakeBody, new int[]{snakeHeadPos[0] + curDir[0], snakeHeadPos[1]+curDir[1]})) {
                 duration++;
                 break;
             }
 
             // 사과의 위치와 뱀의 머리가 부딪히면
-            //int applePosIdx = applePos.indexOf(snakeHeadPos);
             int applePosIdx = GetApplePositionIdx(applePos, snakeHeadPos);
             if(applePosIdx != -1)
             {
@@ -118,18 +118,10 @@ public class bakjoon_3190 {
         return -1;
     }
 
-    static boolean IsWall(ArrayList<int[]> snakeBody, int N)
-    {
-        for(int i = 0; i < snakeBody.size(); ++i) {
-            // bodyPart[0] : x좌표, bodyPart[1] : y좌표
-            int[] bodyPart = snakeBody.get(i);
-
-            // 벽에 부딪힘
-            // 0,0을 1,1로 계산해서 if문 내부가 이렇다
-            if (bodyPart[0] < 1 || bodyPart[0] > N
-                    || bodyPart[1] < 1 || bodyPart[1] > N) {
-                return true;
-            }
+    static boolean IsWall(int[] snakeHead, int N) {
+        if (snakeHead[0] < 1 || snakeHead[0] > N
+                || snakeHead[1] < 1 || snakeHead[1] > N) {
+            return true;
         }
         return false;
     }
