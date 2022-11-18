@@ -4,7 +4,6 @@ package linked_list;
 class BrowserHistory {
     HomePage head;
     HomePage tail;
-    int size;
     class HomePage{
         HomePage prev;
         HomePage next;
@@ -23,14 +22,14 @@ class BrowserHistory {
             this.head = new HomePage(homepage);
             this.tail = this.head;
         }
-        this.size++;
     }
 
     public void visit(String url) {
-
         HomePage tmp = this.head;
+        
         // 현재 홈페이지의 다음 페이지를 끊어낸다
-        tmp.next     = null;
+        // 현재 헤드포인터는 현재 페이지를 가리키고 있음
+        this.head.next = null;
         while(tmp.next != null)
         {
             tmp = tmp.next;
@@ -39,8 +38,7 @@ class BrowserHistory {
         tmp.next            = newPage;
         newPage.prev        = tmp;
         newPage.next        = null;
-        this.head = newPage;
-        this.size++;
+        this.head           = newPage;
     }
 
     public String forward(int steps) {
