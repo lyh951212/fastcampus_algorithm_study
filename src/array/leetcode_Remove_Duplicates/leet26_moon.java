@@ -1,8 +1,9 @@
+package array.leetcode_Remove_Duplicates;
 /**
 * Memory : 47 MB
 * Runtime : 2 ms
 */
-class Solution {
+class leet26_moon {
     public int removeDuplicates(int[] nums) {
         // 중복된 요소를 제외한 배열의 개수 및 위치
         int k = 0;

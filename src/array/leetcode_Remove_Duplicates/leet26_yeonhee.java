@@ -1,6 +1,7 @@
+package array.leetcode_Remove_Duplicates;
 import java.util.*;
 
-class Solution {
+class leet26_yeonhee {
     public int removeDuplicates(int[] nums) {
         int curValue = nums[0];
         int curIdx = 1;

@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11" inherit-compiler-output="true">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/array/10818" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/array/2566" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/array/4344" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/array/leetcode_Remove_Duplicates" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/hash/1764" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/hash/bakjoon_1351" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/hash/bakjoon_2002" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/hash/leet146" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/linkedlist/1021" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/linkedlist/3190" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/linkedlist/leet1472" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/linkedlist/leet21" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/linkedlist/leet707" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/queue and stack/1158" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/queue and stack/1966" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/queue and stack/2164" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/queue and stack/5464" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/queue and stack/leetcode225" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/tree" isTestSource="false" />
     </content>
+    <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
