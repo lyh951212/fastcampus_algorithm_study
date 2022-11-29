@@ -1,7 +1,7 @@
 # 패스트캠퍼스 백엔드 과정 알고리즘 스터디
 
 <img src="https://miro.medium.com/max/1091/1*riWRppNtkZYU1lR3vbInIg.png"  width="300" height="300"/>
-***
+
 ### 커밋 규칙
 1. 폴더말고!!!! 인텔리제이 안에서 패키지로 만들어주세요..
 2. "bakjoon_번호" or "leetcode_번호" 형식으로 패키지 명을 맞춰서 생성해주세요
