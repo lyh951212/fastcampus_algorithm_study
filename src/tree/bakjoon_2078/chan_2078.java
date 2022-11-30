@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-
+// 16144KB 152 ms
 public class chan_2078 {
     public static void main(String[] args) throws IOException {
 
