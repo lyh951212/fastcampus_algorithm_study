@@ -30,27 +30,27 @@ def merge(arr, start, mid, end):
     left = arr[start: mid + 1]
     right = arr[mid + 1: end + 1]
 
-    i = 0  # 왼쪽 거 인덱스
-    j = 0  # 오른쪽 거 인덱스
-    k = start  # 전체 배열 인덱스
+    left_index = 0  # 왼쪽 거 인덱스
+    right_index = 0  # 오른쪽 거 인덱스
+    arr_index = start  # 전체 배열 인덱스
 
     # 정렬된 왼쪽 오른쪽 배열을 원래 배열에 삽입
-    while i < len(left) and j < len(right):
-        if left[i] <= right[j]:
-            arr[k] = left[i]
-            i += 1
+    while left_index < len(left) and right_index < len(right):
+        if left[left_index] <= right[right_index]:
+            arr[arr_index] = left[left_index]
+            left_index += 1
         else:
-            arr[k] = right[j]
-            j += 1
-        k += 1
+            arr[arr_index] = right[right_index]
+            right_index += 1
+        arr_index += 1
 
     # 남은 원소들 삽입
-    while i < len(left):
-        arr[k] = left[i]
-        i += 1
-        k += 1
+    while left_index < len(left):
+        arr[arr_index] = left[left_index]
+        left_index += 1
+        arr_index += 1
 
-    while j < len(right):
-        arr[k] = right[j]
-        j += 1
-        k += 1
+    while right_index < len(right):
+        arr[arr_index] = right[right_index]
+        right_index += 1
+        arr_index += 1
