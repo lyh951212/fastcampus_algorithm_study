@@ -5,9 +5,8 @@ input = sys.stdin.readline
 N = int(input())
 
 # 5a + 3b = N
-# a가 row과 b가 col이 2차원 배열을 만들고 각 배열값에는 5a + 3b결과가 들어간다
+# a가 row b가 col, 5a + 3b 결과를 검사
 max_idx = N // 3 + 1
-arr = [[ 0 for c in range(max_idx)] for r in range(max_idx)]
 
 result = list()
 for r in range(max_idx):
@@ -16,6 +15,6 @@ for r in range(max_idx):
             result.append(r+c)
 
 if len(result) == 0:
-     print(-1)
+    print(-1)
 else:
     print(min(result))
